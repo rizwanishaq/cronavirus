@@ -19,8 +19,12 @@ function Countries() {
 
   useEffect(() => {
     const getCountry = async () => {
-      const country = await axios.get("http://ip-api.com/json");
-      setSelectedCountry(country.data.country);
+      try {
+        const country = await axios.get("http://ip-api.com/json");
+        setSelectedCountry(country.data.country);
+      } catch (error) {
+        setSelectedCountry("Spain");
+      }
     };
     getCountry();
   }, []);
