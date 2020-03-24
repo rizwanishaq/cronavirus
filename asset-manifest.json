@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/cronavirus/static/js/main.d783926c.chunk.js",
-    "main.js.map": "/cronavirus/static/js/main.d783926c.chunk.js.map",
+    "main.js": "/cronavirus/static/js/main.d2119bb3.chunk.js",
+    "main.js.map": "/cronavirus/static/js/main.d2119bb3.chunk.js.map",
     "runtime-main.js": "/cronavirus/static/js/runtime-main.54e2894e.js",
     "runtime-main.js.map": "/cronavirus/static/js/runtime-main.54e2894e.js.map",
-    "static/js/2.94fa056a.chunk.js": "/cronavirus/static/js/2.94fa056a.chunk.js",
-    "static/js/2.94fa056a.chunk.js.map": "/cronavirus/static/js/2.94fa056a.chunk.js.map",
+    "static/js/2.51ab5d07.chunk.js": "/cronavirus/static/js/2.51ab5d07.chunk.js",
+    "static/js/2.51ab5d07.chunk.js.map": "/cronavirus/static/js/2.51ab5d07.chunk.js.map",
     "index.html": "/cronavirus/index.html",
-    "precache-manifest.8e27d0405070c37c438c405d55f12383.js": "/cronavirus/precache-manifest.8e27d0405070c37c438c405d55f12383.js",
+    "precache-manifest.80476a5dbff430c55ddc1d80327d5908.js": "/cronavirus/precache-manifest.80476a5dbff430c55ddc1d80327d5908.js",
     "service-worker.js": "/cronavirus/service-worker.js",
-    "static/js/2.94fa056a.chunk.js.LICENSE.txt": "/cronavirus/static/js/2.94fa056a.chunk.js.LICENSE.txt"
+    "static/js/2.51ab5d07.chunk.js.LICENSE.txt": "/cronavirus/static/js/2.51ab5d07.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.54e2894e.js",
-    "static/js/2.94fa056a.chunk.js",
-    "static/js/main.d783926c.chunk.js"
+    "static/js/2.51ab5d07.chunk.js",
+    "static/js/main.d2119bb3.chunk.js"
   ]
 }
