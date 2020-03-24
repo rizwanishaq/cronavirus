@@ -4,17 +4,25 @@ import CountryResults from "./CountryResults";
 
 function Countries() {
   const [countries, setCountries] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState("Spain");
+  const [selectedCountry, setSelectedCountry] = useState("");
 
   useEffect(() => {
     const getCountries = async () => {
       const countriesList = await axios.get(
         "https://covid19.mathdro.id/api/countries"
       );
-      console.log(countriesList.data.countries);
       setCountries(countriesList.data.countries);
     };
     getCountries();
+  }, []);
+
+  useEffect(() => {
+    const getCountry = async () => {
+      const response = await axios.get("https://extreme-ip-lookup.com/json/");
+      setSelectedCountry(response.data.country);
+    };
+
+    getCountry();
   }, []);
 
   return (
