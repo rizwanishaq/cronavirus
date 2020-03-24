@@ -18,8 +18,13 @@ function Countries() {
 
   useEffect(() => {
     const getCountry = async () => {
-      const response = await axios.get("https://extreme-ip-lookup.com/json/");
-      setSelectedCountry(response.data.country);
+      try {
+        const response = await axios.get("https://extreme-ip-lookup.com/json/");
+        setSelectedCountry(response.data.country);
+      } catch (err) {
+        console.log(err);
+        setSelectedCountry("Spain");
+      }
     };
 
     getCountry();
