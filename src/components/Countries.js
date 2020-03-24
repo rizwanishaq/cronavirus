@@ -3,30 +3,18 @@ import axios from "axios";
 import CountryResults from "./CountryResults";
 
 function Countries() {
-  const [countries, setCountries] = useState({});
-  const [selectedCountry, setSelectedCountry] = useState("");
+  const [countries, setCountries] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState("Spain");
 
   useEffect(() => {
     const getCountries = async () => {
       const countriesList = await axios.get(
         "https://covid19.mathdro.id/api/countries"
       );
-
+      console.log(countriesList.data.countries);
       setCountries(countriesList.data.countries);
     };
     getCountries();
-  }, []);
-
-  useEffect(() => {
-    const getCountry = async () => {
-      try {
-        const country = await axios.get("http://ip-api.com/json");
-        setSelectedCountry(country.data.country);
-      } catch (error) {
-        setSelectedCountry("Spain");
-      }
-    };
-    getCountry();
   }, []);
 
   return (
@@ -40,9 +28,9 @@ function Countries() {
             setSelectedCountry(e.target.value);
           }}
         >
-          {Object.keys(countries).map(country => (
-            <option key={country} value={country}>
-              {country}
+          {countries.map(country => (
+            <option key={country["name"]} value={country["name"]}>
+              {country["name"]}
             </option>
           ))}
         </select>
